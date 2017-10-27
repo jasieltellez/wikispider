@@ -34,7 +34,7 @@ class wikiSpider(scrapy.Spider):
         infoPagina['enlaces']=response.css('a[href^="http"] ').xpath('@href').extract()        
         infoPagina['ruta']=nombre_archivo
         for url in infoPagina['enlaces']:
-            if self.cont<200:
+            if self.cont<30: #con este valor controlo el volumen en proporcion de busquedas
                 self.cont=self.cont+1
                 print 'Procesando pagina numero '+str(self.cont)
                 yield scrapy.Request(url=url,callback=self.parse)

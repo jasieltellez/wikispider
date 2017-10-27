@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:java="http://xml.apache.org/xalan/java" xmlns:xalan="http://xml.apache.org/xalan" class="no-js">
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+<meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" name="viewport" />
+<link href="http://sedici.unlp.edu.ar/moz-search-plugin.xml" title="SEDICI para Firefox" type="application/opensearchdescription+xml" rel="search" />
+<link rel="shortcut icon" href="/themes/Sedici2/images/favicon.ico" />
+<link rel="apple-touch-icon" href="/themes/Sedici2/images/apple-touch-icon.png" />
+<meta name="Generator" content="DSpace 1.8.2" />
+<link type="text/css" rel="stylesheet" media="screen" href="/themes/Sedici2/lib/css/reset.css" />
+<link type="text/css" rel="stylesheet" media="screen" href="/themes/Sedici2/lib/css/base.css" />
+<link type="text/css" rel="stylesheet" media="screen" href="/themes/Sedici2/lib/css/helper.css" />
+<link type="text/css" rel="stylesheet" media="screen" href="/themes/Sedici2/lib/css/jquery-ui-1.8.15.custom.css" />
+<link type="text/css" rel="stylesheet" media="screen" href="/themes/Sedici2/lib/css/style.css" />
+<link type="text/css" rel="stylesheet" media="screen" href="/themes/Sedici2/lib/css/authority-control.css" />
+<link type="text/css" rel="stylesheet" media="handheld" href="/themes/Sedici2/lib/css/handheld.css" />
+<link type="text/css" rel="stylesheet" media="print" href="/themes/Sedici2/lib/css/print.css" />
+<link type="text/css" rel="stylesheet" media="all" href="/themes/Sedici2/lib/css/media.css" />
+<link media="screen" type="text/css" rel="stylesheet" href="/themes/Sedici2/lib/css/metadataGenerator.css" />
+<link type="application/opensearchdescription+xml" rel="search" href="http://sedici.unlp.edu.ar:80/open-search/description.xml" title="SeDiCI" />
+<script type="text/javascript">
+                //Clear default text of emty text areas on focus
+                function tFocus(element)
+                {
+                if (element.value == ' '){element.value='';}
+                }
+                //Clear default text of emty text areas on submit
+                function tSubmit(form)
+                {
+                var defaultedElements = document.getElementsByTagName("textarea");
+                for (var i=0; i != defaultedElements.length; i++){
+                if (defaultedElements[i].value == ' '){
+                defaultedElements[i].value='';}}
+                }
+                //Disable pressing 'enter' key to submit a form (otherwise pressing 'enter' causes a submission to start over)
+                function disableEnterKey(e)
+                {
+                var key;
+
+                if(window.event)
+                key = window.event.keyCode;     //Internet Explorer
+                else
+                key = e.which;     //Firefox and Netscape
+
+                if(key == 13)  //if "Enter" pressed, then disable!
+                return false;
+                else
+                return true;
+                }
+
+                function FnArray()
+                {
+                this.funcs = new Array;
+                }
+
+                FnArray.prototype.add = function(f)
+                {
+                if( typeof f!= "function" )
+                {
+                f = new Function(f);
+                }
+                this.funcs[this.funcs.length] = f;
+                };
+
+                FnArray.prototype.execute = function()
+                {
+                for( var i=0; i < this.funcs.length; i++ )
+                {
+                this.funcs[i]();
+                }
+                };
+
+                var runAfterJSImports = new FnArray();
+            </script>
+<script xmlns:i18n="http://apache.org/cocoon/i18n/2.1" src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js" type="text/javascript"> </script>
+<title>Bases de datos NoSQL en cloud computing</title>
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DCTERMS.created" content="2013-06-07T14:36:28Z" scheme="DCTERMS.W3CDTF" />
+<meta name="DCTERMS.available" content="2013-06-07T14:36:28Z" scheme="DCTERMS.W3CDTF" />
+<meta name="DCTERMS.issued" content="2013-06-07" scheme="DCTERMS.W3CDTF" />
+<meta name="DC.identifier" content="http://hdl.handle.net/10915/27121" scheme="DCTERMS.URI" />
+<meta name="DCTERMS.abstract" content="Las bases de datos NoSQL son sistemas de almacenamiento de información que no cumplen con el esquema entidad-relación. Mientras que las tradicionales bases de datos relacionales basan su funcionamiento en tablas, joins y transacciones. Las bases de datos NoSQL no imponen una estructura de datos en forma de tablas y relaciones entre ellas sino que proveen un esquema mucho más flexible.&#xD;&#xA;Las bases NoSQL son adecuadas para una escalabilidad realmente enorme, y tienden a utilizar modelos de consistencia relajados, no garantizando la consistencia de los datos, con el fin de lograr una mayor performance y disponibilidad. A esto se agrega el inconveniente de que no tienen un lenguaje de consulta declarativo, por lo que requiere de mayor programación para la manipulación de los datos.&#xD;&#xA;En general se pueden mencionar Sistemas NoSQL clasificados en cuatro categorías:&#xD;&#xA;• Framework Map-Reduce (usado por aplicaciones que hacen procesamiento analítico online - OLAP), Por ejemplo Hadoop.&#xD;&#xA;• Almacenamiento Clave-Valor (sistemas que tienden al procesamiento de transacciones online - OLTP), Por ejemplo: Google BigTable, Amazon Dynamo, Cassandra, Voldemort, HBase.&#xD;&#xA;• Almacenamiento de Documentos Por ejemplo: CouchDB, MongoDDB, SimpleDB &#xD;&#xA;• Sistemas de base de datos Gráficas.Por ejemplo: Neo4j, FlockDB, Pregel.&#xD;&#xA;Con respecto al almacenamiento en Columnas que en general son tratados como Sistemas NoSQL, no son más que una forma de organización de un sistema de base de datos relacional. Sin embargo por la alta performance para cierto tipo de aplicaciones son considerados como del tipo almacenamiento Clave-Valor.&#xD;&#xA;En resumen, para manipular enormes cantidades de información de manera muy rápida los Sistemas NoSQL trabajan mejor que los sistemas de base de datos tradicionales, sin embargo para muchísimas aplicaciones la solución está en las bases de datos tradicionales." xml:lang="es" />
+<meta name="DCTERMS.extent" content="p. 166-170" xml:lang="es" />
+<meta name="DC.language" content="es" xml:lang="es" scheme="DCTERMS.RFC1766" />
+<meta name="DC.title" content="Bases de datos NoSQL en cloud computing" xml:lang="es" />
+<meta name="DC.type" content="Objeto de conferencia" xml:lang="es" />
+<meta name="DC.creator" content="Martín, Adriana Elizabeth" xml:lang="es" />
+<meta name="DC.creator" content="Chávez, Susana Beatriz" xml:lang="es" />
+<meta name="DC.creator" content="Rodríguez, Nelson R." xml:lang="es" />
+<meta name="DC.creator" content="Valenzuela, Adriana" xml:lang="es" />
+<meta name="DC.creator" content="Murazzo, María Antonia" xml:lang="es" />
+<meta name="DC.description" content="Eje: Bases de Datos y Minería de Datos" xml:lang="es" />
+<meta name="DC.subject" content="Ciencias Informáticas" xml:lang="es" />
+<meta name="DC.subject" content="base de datos" xml:lang="es" />
+<meta name="DC.subject" content="NoSQL" xml:lang="es" />
+<meta name="DC.subject" content="map-reduce" xml:lang="en" />
+<meta name="DC.subject" content="cloud computing" xml:lang="en" />
+<meta name="DC.type" content="Objeto de conferencia" xml:lang="es" />
+<meta name="DCTERMS.license" content="Creative Commons Attribution-NonCommercial-ShareAlike 2.5 Argentina (CC BY-NC-SA 2.5)" />
+<meta name="DC.rights" content="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/" scheme="DCTERMS.URI" />
+<meta name="DC.date" content="2013-04" />
+<meta name="DCTERMS.isPartOf" content="XV Workshop de Investigadores en Ciencias de la Computación" xml:lang="es" />
+
+<meta content="2013-06-07T14:36:28Z" name="citation_online_date" />
+<meta content="Ciencias Informáticas; base de datos; Objeto de conferencia; Objeto de conferencia; NoSQL; map-reduce; cloud computing" name="citation_keywords" />
+<meta content="XV Workshop de Investigadores en Ciencias de la Computación" name="citation_conference_title" />
+<meta content="2013-06-07" name="citation_publication_date" />
+<meta content="Martín, Adriana Elizabeth; Chávez, Susana Beatriz; Rodríguez, Nelson R.; Valenzuela, Adriana; Murazzo, María Antonia" name="citation_author" />
+<meta content="Bases de datos NoSQL en cloud computing" name="citation_title" />
+<meta content="http://sedici.unlp.edu.ar/bitstream/handle/10915/27121/Documento_completo.pdf?sequence=1" name="citation_pdf_url" />
+<meta content="es" name="citation_language" />
+<meta content="http://hdl.handle.net/10915/27121" name="citation_abstract_html_url" />
+</head><!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+                <!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+                <!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+                <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
+                <!--[if (gt IE 9)|!(IE)]><!--><body><!--<![endif]-->
+<div id="ds-main">
+<div id="ds-header-wrapper">
+<div class="clearfix" id="ds-header">
+<a id="ds-header-logo-link" href="/">
+<span id="ds-header-logo"> </span>
+<span id="ds-header-logo-text">SEDICI - Repository of National University of La Plata</span>
+</a>
+<div xmlns:i18n="http://apache.org/cocoon/i18n/2.1" id="unlp_logo">
+<img src="/themes/Sedici2/images/logo_unlp_grande.png"> 
+			 		</img>
+</div>
+</div>
+<div id="topNav">
+<ul id="ds-menu-superior">
+<li class="main">
+<a href="/">Home</a>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="main">
+<a href="/discover">Search</a>
+<ul xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<li>
+<a href="/community-list">Collections</a>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<a href="/browse?type=author&amp;rpp=60">Authors</a>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<a href="/browse?type=subject">Subjects</a>
+</li>
+</ul>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="main">
+<a href="/submit">Upload Material</a>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="main">
+<a href="#">Institutional</a>
+<ul xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<li>
+<a href="/pages/queEsSedici">What is SEDICI?</a>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<a href="/pages/politicas">Repository policies</a>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<a href="/pages/links">Links</a>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<a href="/pages/staff">Staff</a>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<a href="/pages/comoLlegar">How to get here</a>
+</li>
+</ul>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="main">
+<a href="#">Frequentes questions</a>
+<ul xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<li>
+<a href="/pages/comoAgregarTrabajos">How to add documents</a>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<a href="/pages/informacionTesistas">Information for posgraduated contributors</a>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<a href="/pages/revistasAccesoAbierto">Open Access Journals</a>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<a href="/pages/FAQ">FAQ</a>
+</li>
+</ul>
+</li>
+<li xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="main">
+<a class="user_voice_feedback" href="#">Contact</a>
+</li>
+</ul>
+<div xmlns:i18n="http://apache.org/cocoon/i18n/2.1" id="socialbar">
+<a title="Visitenos en Facebook" href="http://www.facebook.com/sedici.unlp">
+<img src="/themes/Sedici2/images/icono_facebook.png" />
+</a>
+<a title="Síganos en Twitter" href="https://twitter.com/sedici_unlp">
+<img src="/themes/Sedici2/images/icono_twitter.png" />
+</a>
+<a title="Visite el blog de SEDICI" href="http://sedici.unlp.edu.ar/blog">
+<img src="/themes/Sedici2/images/icono_blog.png" />
+</a>
+</div>
+</div>
+</div>
+<div class="hidden" id="no-js-warning-wrapper">
+<div id="no-js-warning">
+<div class="notice failure">JavaScript is disabled for your browser. Some features of this site may not work without it.</div>
+</div>
+</div>
+<div id="ds-content-wrapper">
+<div class="clearfix" id="ds-content">
+<div id="ds-left-section">
+<div xmlns:ex="ar.edu.unlp.sedici.xmlui.xsl.XslExtensions" id="home_search">
+<h2>Search resources</h2>
+<p xmlns:i18n="http://apache.org/cocoon/i18n/2.1">Search among more than <span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="resource_count">55000</span> resources available in the repository</p>
+<form xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="ds-interactive-div" action="/discover" method="GET" onsubmit="javascript:tSubmit(this);">
+<p class="ds-paragraph">
+<input name="query" value="" type="text" class="ds-text-field" id="aspect_discovery_SiteViewer_field_query" />
+<input name="submit" value="" type="submit" class="ds-button-field" id="aspect_discovery_SiteViewer_field_submit" />
+</p>
+</form>
+</div>
+<div xmlns:ex="ar.edu.unlp.sedici.xmlui.xsl.XslExtensions" id="home_autoarchivo">
+<h2>Upload resources</h2>
+<p xmlns:i18n="http://apache.org/cocoon/i18n/2.1">Upload your works to SEDICI to increase its visibility and improve its impact</p>
+<div xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<a href="/pages/comoAgregarTrabajos">
+<img xmlns:i18n="http://apache.org/cocoon/i18n/2.1" title="Upload a new document" src="/themes/Sedici2/images/autoarchivo_home.png"> 
+			 		</img>
+</a>
+</div>
+</div>
+			 
+		</div>
+<div id="ds-body">
+<div id="ds-trail-wrapper">
+<ul id="ds-trail">
+<li class="ds-trail-link">
+<a href="/handle/10915/18267">Red de Universidades con Carreras en Informática (RedUNCI)</a>
+</li>
+<li class="ds-trail-arrow">→</li>
+<li class="ds-trail-link">
+<a href="/handle/10915/18269">Eventos</a>
+</li>
+<li class="ds-trail-arrow">→</li>
+<li class="ds-trail-link">
+<a href="/handle/10915/18336">WICC</a>
+</li>
+<li class="ds-trail-arrow">→</li>
+<li class="ds-trail-link">
+<a href="/handle/10915/27083">WICC 2013</a>
+</li>
+</ul>
+</div>
+<div id="aspect_artifactbrowser_ItemViewer_div_item-view" class="ds-static-div primary">
+<!-- External Metadata URL: cocoon://metadata/handle/10915/27121/mets.xml-->
+<div class="item-summary-view-metadata">
+<h1>Bases de datos NoSQL en cloud computing</h1>
+<div id="simple-author-date-view">
+<div class="simple-item-view-authors">
+<div>
+<span class="metadata-label">Authors: 
+							</span>
+<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="ds-dc_contributor_author-authority">
+<a href="/discover?fq=author_filter%3Amartin%2C\+adriana\+elizabeth\|\|\|Martin%2C\+Adriana\+Elizabeth">Martín, Adriana Elizabeth</a> | </span>
+<span class="ds-dc_contributor_author-authority">
+<a href="/discover?fq=author_filter%3Achavez%2C\+susana\+beatriz\|\|\|Chavez%2C\+Susana\+Beatriz">Chávez, Susana Beatriz</a> | </span>
+<span class="ds-dc_contributor_author-authority">
+<a href="/discover?fq=author_filter%3Arodriguez%2C\+nelson\+r.\|\|\|Rodriguez%2C\+Nelson\+R.">Rodríguez, Nelson R.</a> | </span>
+<span class="ds-dc_contributor_author-authority">
+<a href="/discover?fq=author_filter%3Avalenzuela%2C\+adriana\|\|\|Valenzuela%2C\+Adriana">Valenzuela, Adriana</a> | </span>
+<span class="ds-dc_contributor_author-authority">
+<a href="/discover?fq=author_filter%3Amurazzo%2C\+maria\+antonia\|\|\|Murazzo%2C\+Maria\+Antonia">Murazzo, María Antonia</a>
+</span>
+</div>
+</div>
+<div class="simple-metadata-view-date">
+<span class="date-exposure">2013</span>
+</div> </div>
+<div class="share-bar">
+<div id="fb-root">
+<!-- -->
+</div>
+<div id="share_fb"> </div>
+<div id="share_tw"> </div>
+<div id="import_mendeley">
+<a title="Add this article to your Mendeley library" target="_blank" href="https://www.mendeley.com/import/?url=http%3A%2F%2Fsedici.unlp.edu.ar%2Fhandle%2F10915%2F27121">
+<span> </span>
+</a>
+</div>
+<div id="share_research_gate">
+<a title="Share on ResearchGate" target="_blank" href="https://www.researchgate.net/go.Share.html?url=http%3A%2F%2Fsedici.unlp.edu.ar%2Fhandle%2F10915%2F27121&amp;title=Bases+de+datos+NoSQL+en+cloud+computing">
+<span> </span>
+</a>
+</div>
+</div>
+<div class="metadata simple-item-view-other subtype">
+<span class="metadata-label">Document type:</span>
+<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata-value">
+<a href="/discover?fq=type_filter%3Aobjeto\+de\+conferencia\|\|\|Objeto\+de\+conferencia">Objeto de conferencia</a>
+</span>
+</div>
+<div class="simple-item-view-description">
+<h2>Abstract</h2>
+<div xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+<p>Las bases de datos NoSQL son sistemas de almacenamiento de información que no cumplen con el esquema entidad-relación. Mientras que las tradicionales bases de datos relacionales basan su funcionamiento en tablas, joins y transacciones. Las bases de datos NoSQL no imponen una estructura de datos en forma de tablas y relaciones entre ellas sino que proveen un esquema mucho más flexible.
+Las bases NoSQL son adecuadas para una escalabilidad realmente enorme, y tienden a utilizar modelos de consistencia relajados, no garantizando la consistencia de los datos, con el fin de lograr una mayor performance y disponibilidad. A esto se agrega el inconveniente de que no tienen un lenguaje de consulta declarativo, por lo que requiere de mayor programación para la manipulación de los datos.
+En general se pueden mencionar Sistemas NoSQL clasificados en cuatro categorías:
+• Framework Map-Reduce (usado por aplicaciones que hacen procesamiento analítico online - OLAP), Por ejemplo Hadoop.
+• Almacenamiento Clave-Valor (sistemas que tienden al procesamiento de transacciones online - OLTP), Por ejemplo: Google BigTable, Amazon Dynamo, Cassandra, Voldemort, HBase.
+• Almacenamiento de Documentos Por ejemplo: CouchDB, MongoDDB, SimpleDB 
+• Sistemas de base de datos Gráficas.Por ejemplo: Neo4j, FlockDB, Pregel.
+Con respecto al almacenamiento en Columnas que en general son tratados como Sistemas NoSQL, no son más que una forma de organización de un sistema de base de datos relacional. Sin embargo por la alta performance para cierto tipo de aplicaciones son considerados como del tipo almacenamiento Clave-Valor.
+En resumen, para manipular enormes cantidades de información de manera muy rápida los Sistemas NoSQL trabajan mejor que los sistemas de base de datos tradicionales, sin embargo para muchísimas aplicaciones la solución está en las bases de datos tradicionales.</p>
+</div>
+</div>
+<div class="simple-item-view-description">
+<h2>Notes</h2>
+<p xmlns:i18n="http://apache.org/cocoon/i18n/2.1">Eje: Bases de Datos y Minería de Datos</p>
+</div>
+<h2>General information</h2>
+<div xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata simple-item-view-other date-exposure">
+<span class="metadata-label">Exposure date:</span>
+<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata-value">abril 2013</span>
+</div>
+<div class="metadata simple-item-view-other language">
+<span class="metadata-label">Document language:</span>
+<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata-value">Spanish</span>
+</div>
+<div xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata simple-item-view-other relation-event">
+<span class="metadata-label">Event:</span>
+<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata-value">XV Workshop de Investigadores en Ciencias de la Computación</span>
+</div>
+<div class="metadata simple-item-view-other originInfo">
+<span class="metadata-label">Origin:</span>
+<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata-value">Red de Universidades con Carreras en Informática (RedUNCI)</span>
+</div>
+<div class="metadata simple-item-view-other format-extent">
+<span class="metadata-label">Extent:</span>
+<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata-value">p. 166-170</span>
+</div>
+<div id="subjects">
+<div class="metadata simple-item-view-other subject-materias">
+<span class="metadata-label">Subjects:</span>
+<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata-value">
+<a href="/discover?fq=subject_filter%3Aciencias\+informaticas\|\|\|Ciencias\+Informaticas">Ciencias Informáticas</a>
+</span>
+</div>
+<div class="metadata simple-item-view-other subject-descriptores">
+<span class="metadata-label">Descriptors:</span>
+<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata-value">base de datos</span>
+</div>
+<div class="metadata simple-item-view-other subject-keyword">
+<span class="metadata-label">Keywords:</span>
+<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata-value">NoSQL</span>; <span class="metadata-value">map-reduce</span>; <span class="metadata-value">cloud computing</span>
+</div>
+</div>
+<div id="item-file-section">
+<h2>Download Files</h2>
+<div xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="file-list">
+<div class="file-wrapper clearfix">
+<div class="thumbnail-wrapper">
+<a target="_blank" class="image-link" href="/bitstream/handle/10915/27121/Documento_completo.pdf?sequence=1">
+<img src="/themes/Sedici2/images/mime_pdf.png" alt="Icon" />
+</a>
+</div>
+<div class="file-metadata">
+<span>
+<a target="_blank" class="image-link" href="/bitstream/handle/10915/27121/Documento_completo.pdf?sequence=1">Documento completo
+<br />Download file</a>
+</span> (<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1">101.7Kb</span>) - <span xmlns:i18n="http://apache.org/cocoon/i18n/2.1">PDF</span>
+</div>
+</div>
+</div>
+</div>
+<div xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns:oreatom="http://www.openarchives.org/ore/atom/" xmlns:ore="http://www.openarchives.org/ore/terms/" xmlns:atom="http://www.w3.org/2005/Atom" class="external-services-bar">
+<div id="altmetric-container">
+<div data-badge-popover="bottom" data-badge-type="4" class="altmetric-embed" data-handle="10915/27121">
+							 
+						</div>
+</div>
+<div id="base-search-net">
+<a title="View registry in BASE" target="_blank" href="http://www.base-search.net/Search/Results?q=tit%3ABases+de+datos+NoSQL+en+cloud+computing+dccoll%3Aftunivlaplata&amp;lem=1&amp;type=all&amp;refid=dclink&amp;l=es">
+<span>BASE</span>
+</a>
+</div>
+<div id="google-scholar-search">
+<a title="View citations in Google Scholar" target="_blank" href="http://scholar.google.com/scholar?q=allintitle%3A&quot;Bases+de+datos+NoSQL+en+cloud+computing&quot;">
+<span>GoogleScholar</span>
+</a>
+</div>
+</div>
+<div class="metadata simple-item-view-other date-accessioned">
+<span class="metadata-label">Created:</span>
+<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata-value">7 de junio de 2013</span>
+</div>
+<div class="metadata simple-item-view-other date-available">
+<span class="metadata-label">Available since:</span>
+<span xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="metadata-value">7 de junio de 2013</span>
+</div>
+<div id="item-URI-suggestion">Please, use this identificator(URI) for cite o linking this item: <a xmlns:i18n="http://apache.org/cocoon/i18n/2.1" href="http://hdl.handle.net/10915/27121">http://hdl.handle.net/10915/27121</a>
+</div>
+</div>
+<div id="view-item-metadata">
+<a href="/handle/10915/27121?show=full">Show full item record</a>
+</div>
+<h2 xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="ds-list-head">This item appears in the following Collection(s)</h2>
+<ul xmlns:i18n="http://apache.org/cocoon/i18n/2.1" xmlns="http://di.tamu.edu/DRI/1.0/" id="ds-trail-items">
+<li class="ds-trail-link">
+<a href="/handle/10915/18336">WICC</a>
+<span>→</span>
+<a href="/handle/10915/27083">WICC 2013</a>
+</li>
+</ul>
+</div>
+<div about="http://hdl.handle.net/10915/27121" style="margin:0em 2em 0em 2em; padding-bottom:0em;">
+<a title="Creative Commons Attribution-NonCommercial-ShareAlike 2.5 Argentina (CC BY-NC-SA 2.5)" alt="Creative Commons Attribution-NonCommercial-ShareAlike 2.5 Argentina (CC BY-NC-SA 2.5)" href="http://creativecommons.org/licenses/by-nc-sa/2.5/ar/" rel="license">
+<img src="/themes/Sedici2/images/cc-ship.gif" alt="Creative Commons Attribution-NonCommercial-ShareAlike 2.5 Argentina (CC BY-NC-SA 2.5)" style="float:left; margin:0em 1em 0em 0em; border:none;" />
+</a>
+<span style="vertical-align:middle; text-indent:0 !important;">Except where otherwise noted, this item's license is described as Creative Commons Attribution-NonCommercial-ShareAlike 2.5 Argentina (CC BY-NC-SA 2.5)</span>
+</div>
+<div xmlns:i18n="http://apache.org/cocoon/i18n/2.1" id="aspect_artifactbrowser_AddItemCollections_div_item-view-sedici" class="ds-static-div primary">
+<ul id="aspect_artifactbrowser_AddItemCollections_list_item-view-sedici-colecciones" class="ds-simple-list" />
+</div>
+</div>
+<div id="ds-right-section">
+<div id="ds-user-box">
+<div id="login_box">
+<a href="/login">Login</a>
+</div>
+</div>
+	         
+		</div>
+</div>
+</div>
+<div xmlns:i18n="http://apache.org/cocoon/i18n/2.1" id="footer">
+<div id="ds-footer">
+<div id="footercol1" class="column">
+<div class="datos_unlp">
+<strong>
+<a target="_blank" href="http://prebi.unlp.edu.ar/">PREBI</a>
+<span> - </span>
+<a target="_blank" href="http://sedici.unlp.edu.ar/">SEDICI</a>
+		                    © 2003-2017<br />
+<a target="_blank" href="http://www.unlp.edu.ar">National University of La Plata</a>
+</strong>
+<br xmlns:i18n="http://apache.org/cocoon/i18n/2.1" />
+<span id="copyright-info">Rights reserved contemplated by 11.723 law</span>
+</div>
+<a xmlns:i18n="http://apache.org/cocoon/i18n/2.1" target="_blank" class="dspace_link" href="http://www.dspace.org">Supported by <strong xmlns:i18n="http://apache.org/cocoon/i18n/2.1">Dspace</strong>
+</a>
+</div>
+<div id="footercol3" class="column">
+<div class="datos_sedici">49 and 115 St - Ex Liceo Apt. Floor 1<br xmlns:i18n="http://apache.org/cocoon/i18n/2.1" />La Plata, Buenos Aires (C.P. 1900)<br xmlns:i18n="http://apache.org/cocoon/i18n/2.1" />Phone: 0221 423 6696/6677 (int. 141) </div>
+<div xmlns:i18n="http://apache.org/cocoon/i18n/2.1" class="footer-icon">
+<a title="Como llegar a SEDICI" href="/pages/comoLlegar">
+<img class="vermapa" src="/themes/Sedici2/images/vermapa.png" />
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"> </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.15/jquery-ui.min.js" type="text/javascript"> </script><!--[if lt IE 7 ]>
+<script type="text/javascript" src="/themes/Sedici2/lib/js/DD_belatedPNG_0.0.8a.js?v=1"> 
+	        </script>
+<script type="text/javascript">DD_belatedPNG.fix('#ds-header-logo');DD_belatedPNG.fix('#ds-footer-logo');$.each($('img[src$=png]'), function() {DD_belatedPNG.fixPng(this);});</script><![endif]-->
+<script type="text/javascript">
+            runAfterJSImports.execute();
+        </script>
+<script type="text/javascript">
+                   var _gaq = _gaq || [];
+                   _gaq.push(['_setAccount', 'UA-15165518-1']);
+                   _gaq.push(['_trackPageview']);
+
+                   (function() {
+                       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                   })();
+           </script>
+<script type="text/javascript">
+			$(document).ready(function() {
+				//add indicators and hovers to submenu parents
+				$("#topNav li.main").each(function() {
+					if ($(this).children("ul").length) {
+
+						//show subnav on hover
+						$(this).mouseenter(function() {
+							$(this).children("ul").show();
+						});
+
+						//hide submenus on exit
+						$(this).mouseleave(function() {
+							$(this).children("ul").hide();
+						});
+					}
+				});
+			});
+
+			$(document).ready(function() {
+				//click event on confident indicators
+				$("img.ds-authority-confidence").click(function() {
+					var self = $(this).siblings('.ds-authority-label').toggle();
+				});
+			});
+
+			</script>
+<script type="text/javascript" src="/themes/Sedici2/lib/js/slides.min.jquery.js">
+             
+        </script>
+<script type="text/javascript" src="/themes/Sedici2/lib/js/metadataGenerator.js">
+             
+        </script>
+<script type="text/javascript">
+            $(function() {
+	            $( "#community-tabs" ).tabs({
+		            collapsible: false,
+		            fx: {opacity: 'toggle', duration: 'fast'}
+	            });
+            });
+        </script>
+<script type="text/javascript">
+			(function()
+					{var uv=document.createElement('script');
+					uv.type='text/javascript';
+					uv.async=true;
+					uv.src='//widget.uservoice.com/QIUtmn0eqp3spSPiyMziFg.js';
+					var s=document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(uv,s)})()
+		</script>
+<script type="text/javascript">
+			var options = {
+				mode: 'full',
+    			primary_color: '#cc6d00',
+    			link_color: '#007dbf',
+    			default_mode: 'support',
+    			forum_id: 150127,
+			};
+			
+			$("a.user_voice_feedback").click(function() {
+				UserVoice.push(['showLightbox', 'classic_widget', options]);
+				return false;
+			});
+		</script>
+<script type="text/javascript">
+				$(function() {
+					$("#accordion").accordion({autoHeight: false , collapsible: true, active: false});
+					$("#accordion h3 a").click(function(){
+						location.href = $(this).attr("href");
+						return false;
+					});
+				});
+		</script>
+<script type="text/javascript">
+			$(document).ready(function () {
+    			$('table').accordion({autoHeight: false , collapsible: true, active: false, header: '.collection-title' });
+			});
+		</script>
+<script text="text/javascript">
+				 /** twitter share **/    
+			    !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+			
+			    /** facebook share **/
+			    (function(d, s, id) {
+			      var js, fjs = d.getElementsByTagName(s)[0];
+			      if (d.getElementById(id)) return;
+			      js = d.createElement(s); js.id = id;
+			      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3&appId=79106916048";
+			      fjs.parentNode.insertBefore(js, fjs);
+			    }(document, 'script', 'facebook-jssdk'));
+			
+			    $(document).ready(function() {
+			        var share_fb = "#share_fb"; 
+			        var share_tw = "#share_tw"; 
+			        url = window.location.href;
+			
+			        $(share_tw).append('<a href="https://twitter.com/share" class="twitter-share-button" data-via="sedici_unlp" data-lang="es"   data-count="none">Twittear</a>');
+			        $(share_fb).append('<div class="fb-like" data-href="'+url+'" data-width="25" data-layout="button" data-action="like" data-show-faces="true" data-share="true"></div>');
+			    });
+			</script></body></html>
